@@ -95,13 +95,31 @@ class BinarySearchTree {
   }
 
   min() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+   if (!this.bintree) {
+    return;
+   }
+
+   let minNode = this.bintree;
+
+   while(minNode.left) {
+    minNode = minNode.left;
+   }
+   return minNode.data;
+
   }
 
   max() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    if (!this.bintree) {
+      return;
+     }
+  
+     let maxNode = this.bintree;
+  
+     while(maxNode.right) {
+      maxNode = maxNode.right;
+     }
+     return maxNode.data;
+  
   }
 }
 
