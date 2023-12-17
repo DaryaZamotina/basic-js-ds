@@ -8,12 +8,16 @@ const { Node } = require('../extensions/list-tree.js');
 */
 class BinarySearchTree {
 
+  constructor(){
+    this.bintree = null;
+  }
+
   root() {
-    this.root = null;
+    this.bintree = null;
   }
 
   add(data) {
-    this.root = addWithin(this.root, data);
+    this.bintree = addWithin(this.bintree, data);
 
     function addWithin(node, data) {
       if (!node) {
