@@ -17,17 +17,17 @@ class Queue {
   constructor() {
     this.queue = {};
     this.head = 0; 
-    this.tail = 0;
+    this.length = 0;
+    this.first = null;
   }
 
   getUnderlyingList() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    return this.first;
   }
 
   enqueue(value) {
    this.queue[this.tail] = value;
-   this.tail++;
+   this.length++;
   }
 
   dequeue() {
