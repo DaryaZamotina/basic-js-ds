@@ -26,7 +26,7 @@ class Queue {
   }
 
   enqueue(value) {
-   this.queue[this.tail] = value;
+   this.queue[this.length] = value;
    this.length++;
   }
 
